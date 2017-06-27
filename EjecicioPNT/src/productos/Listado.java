@@ -2,7 +2,7 @@ package productos;
 
 import java.util.*;
 
-public class Main{
+public class Listado{
 
 	public static void main(String[] supermercado){
 
