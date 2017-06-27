@@ -1,5 +1,6 @@
 package productos;
 
+
 public abstract class Producto {
 
 	private String nombre;
