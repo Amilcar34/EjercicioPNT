@@ -10,8 +10,8 @@ public class Listado{
 			ArrayList<Producto> lista= new ArrayList<>();
 			lista.add(new Gaseosa("Coca-Cola Zero", 20));
 			lista.add(new Gaseosa("Coca-Cola", 18));
-			lista.add(new Shampoo("Shampoo Sedal", 500, 30));
-			lista.add(new Fruta("Frutillas", 64, "kilo"));
+			lista.add(new Limpieza("Limpieza Sedal", 500, 30));
+			lista.add(new Verduleria("Frutillas", 64, "kilo"));
 
 			for(Producto resultado : lista){
 				System.out.println(resultado.toString());

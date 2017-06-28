@@ -1,10 +1,10 @@
 package productos;
 
-public class Shampoo extends Producto {
+public class Limpieza extends Producto {
 
 	private	int contenido;
 
-	public Shampoo( String nombre, int contenido, int precio ){
+	public Limpieza( String nombre, int contenido, int precio ){
 		super(nombre, precio);
 		this.contenido=contenido;
 	}	
