@@ -1,7 +1,7 @@
 package productos;
 
 
-public class Gaseosa extends Producto {
+public final class Gaseosa extends Producto {
 
 	private double litros;
 

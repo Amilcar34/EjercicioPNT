@@ -1,6 +1,6 @@
 package productos;
 
-public class Limpieza extends Producto {
+public final class Limpieza extends Producto {
 
 	private	int contenido;
 

@@ -1,6 +1,6 @@
 package productos;
 
-public class Verduleria extends Producto {
+public final class Verduleria extends Producto {
 
 	private String unidad;
 
