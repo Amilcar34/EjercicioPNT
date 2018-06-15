@@ -5,8 +5,7 @@ import java.util.*;
 public class Listado{
 
 	public static void main(String[] args)
-	{
-		
+	{	
 		ArrayList<Producto> listaDeProductos= new ArrayList<>();
 		listaDeProductos.add(new Gaseosa("Coca-Cola Zero", 20));
 		listaDeProductos.add(new Gaseosa("Coca-Cola", 18));
