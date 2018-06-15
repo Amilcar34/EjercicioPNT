@@ -4,60 +4,26 @@ import java.util.*;
 
 public class Listado{
 
-	public static void main(String[] supermercado){
+	public static void main(String[] args)
+	{
+		
+		ArrayList<Producto> listaDeProductos= new ArrayList<>();
+		listaDeProductos.add(new Gaseosa("Coca-Cola Zero", 20));
+		listaDeProductos.add(new Gaseosa("Coca-Cola", 18));
+		listaDeProductos.add(new Limpieza("Limpieza Sedal", 500, 30));
+		listaDeProductos.add(new Verduleria("Frutillas", 64, "kilo"));
 
-		try{
-			ArrayList<Producto> lista= new ArrayList<>();
-			lista.add(new Gaseosa("Coca-Cola Zero", 20));
-			lista.add(new Gaseosa("Coca-Cola", 18));
-			lista.add(new Limpieza("Limpieza Sedal", 500, 30));
-			lista.add(new Verduleria("Frutillas", 64, "kilo"));
-
-			for(Producto resultado : lista){
-				System.out.println(resultado.toString());
-
-			}
-			System.out.println("========================================================");
-			System.out.println("Producto más caro: "+ masCaro(lista));
-			System.out.println("Producto más barato: "+ masBarato(lista));
-
-		}
-		catch(Exception e){
-			System.out.println("No se pudo crear el ArrayList");
-		}
-
-	}
-
-	protected static String masCaro(ArrayList<Producto> lista){
-
-		Producto caro=lista.get(0);
-
-		for(Producto resultado : lista)
+		for(Producto resultado : listaDeProductos)
 		{
-			if(resultado.getPrecio() > lista.get(0).getPrecio())
-			{
-				caro= resultado;	
-			}
+			System.out.println(resultado.toString());
 		}
-		return caro.getNombre();
+		System.out.println("========================================================");
+		
+		String productoCaro = FiltroDePrecios.masCaro(listaDeProductos);
+		String productoBrato = FiltroDePrecios.masBarato(listaDeProductos);
+		
+		System.out.println("El producto más caro: "+ productoCaro);
+		System.out.println("El producto más barato: "+ productoBrato);
 	}
-	
-	protected static String masBarato(ArrayList<Producto> lista){
-
-		Producto barato= lista.get(0);
-
-		for(Producto resultado : lista)
-		{ if(resultado.getPrecio() < lista.get(0).getPrecio())
-			{
-				barato= resultado;
-			}
-		}
-		return barato.getNombre();
-	
-	}
-
-
-	
-
 }
 
